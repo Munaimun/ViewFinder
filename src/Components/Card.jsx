@@ -2,10 +2,10 @@ import React from "react";
 import { useState } from "react";
 
 // all the props are form date file
-const Card = ({ id, image, info, price, name }, removeTour) => {
+const Card = ({ id, image, info, price, name, removeTour }) => {
   const [readmore, setReadmore] = useState(false);
-  // taking the first 200 char form the info
-  const description = `${info.substring(0, 200)}....`;
+  //info.substring(0, 200) === showing the first 200 char form the info
+  const description = readmore ? info : `${info.substring(0, 200)}....`;
 
   //   setting the readmore value opposite on clicking
   function readmoreHandler() {
@@ -24,8 +24,7 @@ const Card = ({ id, image, info, price, name }, removeTour) => {
           {description}
           {/* if readmore is truo show less else show read more in the description*/}
           <span className="read-more" onClick={readmoreHandler}>
-            {" "}
-            {readmore ? "show less" : "read more"}{" "}
+            {readmore ? "show less" : "read more"}
           </span>
         </div>
       </div>

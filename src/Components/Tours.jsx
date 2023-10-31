@@ -9,7 +9,7 @@ const Tours = ({ tours, removeTour }) => {
       <div>
         {/* returning card for every tours */}
         {tours.map((tour) => {
-          return <Card key={tour.id} {...tour} remveTour={removeTour} />;
+          return <Card key={tour.id} {...tour} removeTour={removeTour} />;
         })}
       </div>
     </div>

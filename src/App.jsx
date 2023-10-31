@@ -1,7 +1,5 @@
 import { useState } from "react";
 import data from "./data";
-import dhaka from "./img/dhaka.jpg";
-import cox from "./img/cox.jpg";
 import Tours from "./Components/Tours";
 import "./App.css";
 
